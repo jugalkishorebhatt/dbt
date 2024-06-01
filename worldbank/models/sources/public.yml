@@ -1,8 +1,0 @@
-version: 2
-
-sources:
-  - name: landing
-    database: postgres  
-    schema: public  
-    tables:
-      - name: worldbank

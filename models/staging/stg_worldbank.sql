@@ -1,6 +1,7 @@
+
 with source as (
 
-    select * from {{ source('landing', 'worldbank') }}
+    select * from {{ source('public', 'worldbank') }}
 
 ),
  

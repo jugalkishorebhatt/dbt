@@ -14,42 +14,29 @@ jobs:
 
     services:
       postgres:
-        image: postgres:latest
+        image: postgres:15.2
         env:
-          POSTGRES_DB: ${{ secrets.DB_NAME }}
-          POSTGRES_USER: ${{ secrets.DB_USER }}
-          POSTGRES_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          POSTGRES_HOST: 172.17.0.1
+          POSTGRES_DB: "postgres"
+          POSTGRES_USER: "postgres"
+          POSTGRES_PASSWORD: 1qaz2wsx@
         ports:
           - 5432:5432
-        options: >-
-          --health-cmd "pg_isready -U ${{ secrets.DB_USER }}" 
-          --health-interval 10s 
-          --health-timeout 5s 
-          --health-retries 5
+        
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@main
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@main
         with:
           python-version: '3.8'
 
-      - name: Install dbt Core
-        run: pip install dbt
 
       - name: Install dependencies
         run: pip install -r requirements.txt
+          
 
-      - name: Run dbt deps
-        run: dbt deps
-
-      - name: Run dbt seed
-        run: dbt seed --profiles-dir . --target ci
-
-      - name: Run dbt run
-        run: dbt run --profiles-dir . --target ci
-
-      - name: Run dbt test
-        run: dbt test --profiles-dir . --target ci
+      - name: Run dbt build
+        run: dbt build --profiles-dir . --target ci
