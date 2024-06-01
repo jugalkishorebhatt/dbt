@@ -1,0 +1,11 @@
+
+version: 2
+
+models:
+  - name: stg_worldbank
+    description: "Transient laye"
+    columns:
+      - name: country
+        description: "The primary key for this table"
+        data_tests:
+          - not_null

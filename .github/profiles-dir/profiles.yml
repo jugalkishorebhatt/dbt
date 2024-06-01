@@ -1,0 +1,11 @@
+my_project:
+  target: ci
+  outputs:
+    ci:
+      type: postgres
+      host: $HOST
+      user: $USER
+      password: $PASSWORD
+      port: $PORT
+      dbname: $DATABASE
+      schema: public
