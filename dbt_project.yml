@@ -25,7 +25,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   WorldBank:
     staging:
-      +materialized: table
+      +materialized: view
     dwh:
       +materialized: table
 
@@ -37,6 +37,7 @@ models:
 # files using the `{{ config(...) }}` macro.
 models:
   WorldBank:
-    # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: view
+    staging:
+      +materialized: table
+    dwh:
+      +materialized: table
