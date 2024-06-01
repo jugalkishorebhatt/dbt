@@ -2,7 +2,7 @@ WorldBank:
   outputs:
     ci:
       dbname: postgres
-      host: 172.17.0.1
+      host: 172.17.0.2
       pass: 1qaz2wsx@
       port: 5432
       schema: public
