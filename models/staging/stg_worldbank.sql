@@ -1,6 +1,6 @@
 with source as (
-
-    select * from {{ source('public', 'worldbank') }}
+        select * from "worldbank"
+    --select * from {{ source('public', 'worldbank') }}
 
 ),
  
