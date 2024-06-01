@@ -33,17 +33,9 @@ jobs:
         with:
           python-version: '3.8'
 
-      - name: Install dbt Core
-        run: pip install dbt
 
       - name: Install dependencies
         run: pip install -r requirements.txt
-
-      - name: Run dbt deps
-        run: dbt deps
-
-      - name: Run dbt seed
-        run: dbt seed --profiles-dir . --target ci
 
       - name: Run dbt run
         run: dbt run --profiles-dir . --target ci
