@@ -1,4 +1,4 @@
-my_project:
+worldbank:
   target: ci
   outputs:
     ci:
