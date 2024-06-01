@@ -37,6 +37,11 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Set up dbt environment
+        run: |
+          mkdir -p ~/.dbt
+          echo "profiles.yml" > ~/.dbt/profiles.yml
+
       - name: Run dbt run
         run: dbt run --profiles-dir . --target ci
 
