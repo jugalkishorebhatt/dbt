@@ -1,4 +1,4 @@
-worldbank:
+WorldBank:
   target: ci
   outputs:
     ci:
