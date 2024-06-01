@@ -2,11 +2,11 @@ WorldBank:
   outputs:
     ci:
       dbname: postgres
-      host: $DB_HOST
-      pass: $DB_PASSWORD
+      host: ${{ secrets.DB_HOST }}
+      pass: ${{ secrets.DB_PASSWORD }}
       port: 5432
       schema: public
       threads: 2
       type: postgres
-      user: $DB_USER
+      user: ${{ secrets.DB_USER }}
   target: ci
