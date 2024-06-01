@@ -2,8 +2,8 @@ WorldBank:
   outputs:
     ci:
       dbname: postgres
-      host: "{{ env_var('POSTGRES_HOST') }}"
-      pass: "{{ env_var('POSTGRES_PASSWORD') }}"
+      host: 172.17.0.2
+      pass: 1qaz2wsx@
       port: 5432
       schema: public
       threads: 2
