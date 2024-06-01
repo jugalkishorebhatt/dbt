@@ -2,11 +2,11 @@ WorldBank:
   outputs:
     ci:
       dbname: postgres
-      host: $HOST
-      pass: $PASSWORD
+      host: "{{ env_var('HOST') }}"
+      pass: "{{ env_var('PASSWORD') }}"
       port: 5432
       schema: public
       threads: 2
       type: postgres
-      user: $DB_USER
+      user: "{{ env_var('USER') }}"
   target: ci
