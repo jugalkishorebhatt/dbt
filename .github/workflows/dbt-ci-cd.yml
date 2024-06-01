@@ -16,10 +16,10 @@ jobs:
       postgres:
         image: postgres:latest
         env:
-          POSTGRES_HOST: ${{ secrets.DB_HOST }}
+          POSTGRES_HOST: 172.17.0.2
           POSTGRES_DB: "postgres"
           POSTGRES_USER: "postgres"
-          POSTGRES_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          POSTGRES_PASSWORD: 1qaz2wsx@
         ports:
           - 5432:5432
         
