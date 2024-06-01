@@ -1,5 +1,5 @@
 with source as (
-        select * from "worldbank"
+        select * from postgres.public.worldbank
     --select * from {{ source('public', 'worldbank') }}
 
 ),
