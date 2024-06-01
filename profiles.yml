@@ -8,5 +8,5 @@ WorldBank:
       schema: public
       threads: 2
       type: postgres
-      user: "{{ env_var('POSTGRES_USER') }}"
+      user: postgres
   target: ci
