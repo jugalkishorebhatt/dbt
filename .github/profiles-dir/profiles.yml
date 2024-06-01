@@ -4,8 +4,8 @@ my_project:
     ci:
       type: postgres
       host: $HOST
-      user: $USER
-      password: $PASSWORD
-      port: $PORT
-      dbname: $DATABASE
+      user: $DB_USER
+      password: $DB_PASSWORD
+      port: 5432
+      dbname: postgres
       schema: public
