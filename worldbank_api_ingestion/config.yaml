@@ -1,0 +1,6 @@
+database: "postgres"
+user: "postgres"
+password: "1qaz2wsx@"
+host: "172.17.0.2"
+port: "5432"
+api_url: "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.MKTP.CD?format=json"
